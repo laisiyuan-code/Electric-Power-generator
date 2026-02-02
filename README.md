@@ -20,7 +20,7 @@ Coolant is pumped through a copper coil wrapped around the water bottle. As cool
 
 #### Coolant Evaluation
 | no. |Coolant Type      | How cold can it get       | heat transfer speed  | Viscosity |
-|:------------:|:-------------------:|:-----------------:|:----------------------:|
+|:------------:|:-------------------:|:-----------------:|:----------------------:|:----:|
 
 ## Heat Transfer Equations
 - ## For Air Across Heat Sink Fins
