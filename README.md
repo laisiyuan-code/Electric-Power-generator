@@ -14,3 +14,25 @@ Coolant is pumped through a copper coil wrapped around the water bottle. As cool
 
 ## Safety Guidelines and standards
 -
+
+## Heat Transfer Equations
+- ## For Air Across Heat Sink Fins
+
+- **General Idea: Heat Transfer is generally by convection (in reality more complicated than that but for now take this)**
+<img width="784" height="509" alt="image" src="https://github.com/user-attachments/assets/474447b1-96b8-49c4-a9fe-6d502ba4739d" />
+
+- **General Fin Equations**
+<img width="592" height="300" alt="image" src="https://github.com/user-attachments/assets/8d9c0c63-3e5e-485e-85c7-982251e38311" />
+<img width="592" height="300" alt="image" src="https://github.com/user-attachments/assets/271e3db9-82ff-40b3-939e-8d9e9cc96d62" />
+
+- **Fin Efficiency and Overall Effectiveness**
+<img width="590" height="300" alt="image" src="https://github.com/user-attachments/assets/12aabf7f-a6e7-4f10-9292-5153b583a361" />
+<img width="591" height="300" alt="image" src="https://github.com/user-attachments/assets/e877aa4d-403a-4103-9882-4bd2ae10efd9" />
+
+- **Parameters to take note off**
+- Width, Length, Thickness: Surface Area
+- Number of Fins
+- Temperature Difference between heat sink and surroundings
+- Convective Heat Transfer Coefficient
+
+- ## For Cold Water Running Through Copper Tubes
