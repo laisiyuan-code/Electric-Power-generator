@@ -29,10 +29,31 @@ Coolant is pumped through a copper coil wrapped around the water bottle. As cool
 <img width="590" height="300" alt="image" src="https://github.com/user-attachments/assets/12aabf7f-a6e7-4f10-9292-5153b583a361" />
 <img width="591" height="300" alt="image" src="https://github.com/user-attachments/assets/e877aa4d-403a-4103-9882-4bd2ae10efd9" />
 
-- **Parameters to take note off**
+- **Parameters to take note of**
 - Width, Length, Thickness: Surface Area
 - Number of Fins
 - Temperature Difference between heat sink and surroundings
 - Convective Heat Transfer Coefficient
 
 - ## For Cold Water Running Through Copper Tubes
+
+- **General Idea: Heat Transfer also by convection BUT also depends on the nature of flow (Like Turbulent vs Laminar etc.)**
+<img width="794" height="440" alt="image" src="https://github.com/user-attachments/assets/116afd61-5b85-4e37-8765-6bdfb886921c" />
+
+- **Determining Flow and the Temperature at which to evaluate the thermal properties of the material at**
+<img width="593" height="300" alt="image" src="https://github.com/user-attachments/assets/54ac229f-8d3d-4273-9494-3864de04da84" />
+<img width="593" height="300" alt="image" src="https://github.com/user-attachments/assets/682a0192-7c82-45a0-88f6-d40c72c2c343" />
+
+- **Simplest Thermal Analysis (but unlikely to be similar to reality)**
+<img width="847" height="430" alt="image" src="https://github.com/user-attachments/assets/5b3a5540-a4a6-4a62-aa8b-2b1a969eecb2" />
+
+- **General Thermal Analysis**
+<img width="529" height="300" alt="image" src="https://github.com/user-attachments/assets/1f61ce98-3f42-4c8d-84ce-bd97d2e9ccd0" />
+<img width="529" height="300" alt="image" src="https://github.com/user-attachments/assets/7deb50fa-e5f9-4291-b53f-fca107575423" />
+
+- **Parameters to take note of**
+- Surface Area of fluid in contact with inner surface of tube
+- Mass flow rate of fluid (essentially velocity)
+- Convective Heat Transfer Coefficient
+- Inlet and Outlet Temperature
+
