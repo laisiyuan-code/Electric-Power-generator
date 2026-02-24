@@ -18,9 +18,20 @@ Coolant is pumped through a copper coil wrapped around the water bottle. As cool
 ## Parameters
 
 
-#### Coolant Evaluation
-| no. |Coolant Type      | How cold can it get       | Thermal Conductivity  | Viscosity | 
-|:------------:|:-------------------:|:-----------------:|:----------------------:|:----:|
+## Coolant Evaluation
+| No. | Coolant Type | Freeze Point (°C) | Boiling Point (°C) | Thermal Conductivity (W/m·K) | Specific Heat (kJ/kg·K) | Viscosity (mPa·s @25°C) | Toxicity Level | Environmental Impact | Risk to Drinking Water if Leak Occurs |
+|-----|--------------|------------------|--------------------|------------------------------|--------------------------|--------------------------|----------------|----------------------|----------------------------------------|
+| 1 | Distilled Water | 0 | 100 | 0.60 | 4.18 | 0.89 | None | None | Safe |
+| 2 | Water + 20% Propylene Glycol | -7 | ~103 | 0.48 | 3.9–4.0 | ~1.8 | Low | Low | Low risk (discard water) |
+| 3 | Water + 30% Propylene Glycol | -12 | ~104 | 0.40–0.45 | ~3.8 | 2.5–3 | Low | Low | Low risk |
+| 4 | Water + 50% Propylene Glycol | -32 | ~106 | 0.35–0.37 | ~3.4 | 5–6 | Low–Moderate | Low | Low risk |
+| 5 | Water + 50% Ethylene Glycol (Car Coolant) | -35 | ~107 | 0.37 | ~3.4 | 4–5 | HIGH (Toxic) | Moderate | Very Dangerous |
+| 6 | Pre-mixed Automotive Coolant (EG-based) | -35 | ~107 | ~0.37 | ~3.4 | 4–6 | HIGH (Toxic) | Moderate | Very Dangerous |
+| 7 | RV Antifreeze (PG-based) | -20 | ~103–105 | ~0.40 | ~3.7–3.8 | 3–5 | Low | Low | Low risk |
+| 8 | Ethanol–Water (30%) | -15 | ~85–90 | 0.30 | ~3.6 | ~1.5 | Flammable | High | Unsafe + Flammable |
+| 9 | Methanol–Water Mix | -25 | ~65 | 0.25–0.30 | ~3.2 | ~1.3 | Toxic + Flammable | High | Dangerous |
+| 10 | Refrigerant (R134a) | -101 (boiling) | -26 boiling | N/A | N/A | N/A | Moderate | High GWP | Unsafe |
+| 11 | Isobutane (R600a) | -160 (boiling) | -12 boiling | N/A | N/A | N/A | Flammable | Moderate | Fire Hazard |
 
 ## Heat Transfer Equations
 - ## For Air Across Heat Sink Fins
