@@ -119,3 +119,6 @@ This BOM covers the **essential electrical components** required to convert 3-ph
 | 7    | Wiring (Power)                | 16–18 AWG silicone wire                 | As needed | For AC + DC paths               |
 | 8    | Terminal Blocks / Connectors  | ≥100V, ≥10A rated                       | As needed | For clean connections           |
 | 9    | Heatsink / Mount Plate        | Aluminum plate or heatsink              | 1         | For rectifier cooling           |
+
+#  🔧 Mechanical Breakdown
+
