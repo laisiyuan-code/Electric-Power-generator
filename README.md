@@ -16,7 +16,8 @@ The objective of this project is to develop and evaluate a compact portable powe
 - assess whether the design is suitable for portable off-grid scenarios such as camping.
 
 ## Scope of the Report
-This report focuses on the electrical power generation stage described in the repository. It covers the design requirements, system concept, operating principle, component selection, calculations, prototype implementation approach, testing strategy, and evaluation of performance. Since the repository itself notes that the RC engine version is high-risk and not recommended as a first build, this report treats the concept primarily as a technical study and emphasizes the safer low-voltage bench-prototype approach for validation. :contentReference[oaicite:2]{index=2}
+This report focuses on the electrical power generation stage described in the repository. It covers the design requirements, system concept, operating principle, component selection, calculations, prototype implementation approach, testing strategy, and evaluation of performance. Since the repository itself notes that the RC engine version is high-risk and not recommended as a first build, this report treats the concept primarily as a technical study and emphasizes the safer low-voltage bench-prototype approach for validation. 
+
 
 # ⚡ Electrical BOM (BLDC Generator System)
 
