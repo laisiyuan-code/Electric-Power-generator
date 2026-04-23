@@ -1,3 +1,23 @@
+# 1. Introduction
+
+## Background
+Portable electrical power is important for outdoor activities such as camping, hiking support setups, emergency use, and remote work in off-grid locations. Many common devices used during camping, including phones, lights, GPS units, fans, and small USB-powered electronics, depend on a stable DC power source. In locations where there is no wall socket or mains supply, an independent portable generator system can help provide electrical energy on demand.
+
+This project is based on the *Electric-Power-generator* repository, which explores a concept where rotational mechanical energy drives a brushless DC (BLDC) motor used as a generator. The generated 3-phase AC output is then rectified and smoothed into DC power using a rectifier module and capacitor bank, before being stepped down through a buck converter into a usable output voltage. The repository lists key electrical subsystems including a 3-phase rectifier, smoothing capacitor, fuse, buck converter, optional TVS diode, optional NTC thermistor, power wiring, connectors, and heatsinking. :contentReference[oaicite:1]{index=1}
+
+## Problem Statement
+When camping or travelling in remote outdoor areas, power sockets are often unavailable. This makes it difficult to charge essential low-power devices such as mobile phones, LED lights, or small electronics. A portable generator that converts mechanical motion into usable DC electrical power can provide a practical off-grid energy source.
+
+## Objective of the Project
+The objective of this project is to develop and evaluate a compact portable power-generation concept that converts mechanical rotational input into regulated DC electrical output suitable for outdoor use. The project aims to:
+- generate electrical power from a rotating generator stage,
+- convert the generator's 3-phase AC output into DC,
+- smooth and regulate the output into a useful voltage,
+- assess whether the design is suitable for portable off-grid scenarios such as camping.
+
+## Scope of the Report
+This report focuses on the electrical power generation stage described in the repository. It covers the design requirements, system concept, operating principle, component selection, calculations, prototype implementation approach, testing strategy, and evaluation of performance. Since the repository itself notes that the RC engine version is high-risk and not recommended as a first build, this report treats the concept primarily as a technical study and emphasizes the safer low-voltage bench-prototype approach for validation. :contentReference[oaicite:2]{index=2}
+
 # ⚡ Electrical BOM (BLDC Generator System)
 
 ## Overview
