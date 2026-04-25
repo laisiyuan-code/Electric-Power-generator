@@ -375,3 +375,96 @@ C-HTPA16S3M100-A-P5 pulley
 C-HTPA40S3M100-A-P8 pulley at BLDC motor
     ↓
 57BYA94-48-01 BLDC Motor / Generator
+```
+
+## Assembly Method
+
+1. **Build the Aluminium Profile Frame**
+
+   Start by assembling the aluminium profiles into the main frame shape. This frame acts as the base structure for the engine, motor, and transmission system.
+
+   Use brackets to connect the aluminium profiles together. Use horizontal spacers to keep the frame width consistent and to improve the stiffness of the structure.
+
+   Keep the fasteners slightly loose at first so that the frame can still be adjusted during alignment.
+
+2. **Install the Engine Mount**
+
+   Attach the engine-to-aluminium-profile mount onto the aluminium frame.
+
+   Mount the STS GT .21 Engine onto the engine mount.
+
+   The engine shaft should face the first transmission pulley. The engine must be mounted firmly because movement at this point can cause belt misalignment, vibration, or power loss.
+
+3. **Install the Gear Reduction Stage Mount**
+
+   Attach the gear reduction stage mount to the aluminium profile frame.
+
+   This mount holds the intermediate pulley shafts used in the 3-stage transmission system.
+
+   Position the mount so that the first driven pulley, `C-HTPA48S3M100-A-P10`, is aligned with the engine pulley, `C-HTPA16S3M100-A-P5`.
+
+4. **Install the BLDC Motor Mount**
+
+   Attach the BLDC motor mount to the aluminium frame.
+
+   Mount the `57BYA94-48-01` BLDC motor onto the motor mount.
+
+   The motor shaft should align with the final driven pulley, `C-HTPA40S3M100-A-P8`.
+
+5. **Install the Pulleys and Shafts**
+
+   Install the pulleys according to the transmission path below:
+
+   **Transmission path:**
+
+   STS GT .21 Engine  
+   ↓  
+   `C-HTPA16S3M100-A-P5`  
+   ↓ Timing belt  
+   `C-HTPA48S3M100-A-P10`  
+   ↓ Same shaft  
+   `2 × C-HTPA25S3M100-A-P10`  
+   ↓ Timing belt  
+   Set of `C-HTPA25S3M100-A-P5`  
+   ↓ Same shaft  
+   `C-HTPA16S3M100-A-P5`  
+   ↓ Timing belt  
+   `C-HTPA40S3M100-A-P8`  
+   ↓  
+   `57BYA94-48-01` BLDC Motor
+
+   The first `C-HTPA16S3M100-A-P5` pulley is mounted to the engine output.
+
+   This drives the `C-HTPA48S3M100-A-P10` pulley through the first timing belt.
+
+   On the same shaft as the `C-HTPA48S3M100-A-P10`, install the two `C-HTPA25S3M100-A-P10` pulleys.
+
+   These drive the set of `C-HTPA25S3M100-A-P5` pulleys through the second timing belt.
+
+   On the same shaft as the `C-HTPA25S3M100-A-P5` pulley set, install the second `C-HTPA16S3M100-A-P5` pulley.
+
+   This final `C-HTPA16S3M100-A-P5` pulley drives the `C-HTPA40S3M100-A-P8` pulley connected to the BLDC motor.
+
+6. **Install and Tension the Timing Belts**
+
+   Install the timing belts between each pulley pair.
+
+   The belts should be tight enough to prevent skipping, but not so tight that they overload the shafts, bearings, or motor.
+
+   Rotate the pulley system by hand after each belt is installed. The belts should run straight and the pulleys should rotate smoothly.
+
+7. **Final Tightening and Alignment Check**
+
+   Once the engine, motor, transmission mount, pulleys, and belts are aligned, fully tighten all fasteners.
+
+   Before testing, check that:
+
+   - The aluminium frame is rigid.
+   - The brackets and spacers are fully secured.
+   - The engine mount does not move.
+   - The BLDC motor mount does not move.
+   - The gear reduction stage mount is firmly fixed.
+   - All pulleys are parallel to their matching pulleys.
+   - All belts run straight without drifting sideways.
+   - All shafts rotate smoothly without binding.
+   - There are no loose fasteners near rotating parts.
