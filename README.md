@@ -141,13 +141,108 @@ For this project, a custom 3 phase rectifier was designed to properly fit within
   </tr>
 </table>
 
-#  🔧 Mechanical Breakdown
+# 🔧 Mechanical Breakdown
 
-First, we can see the full assembly in the following figure, Figure 5.
+The mechanical system is designed to hold the engine, transmission stage, and BLDC generator in a fixed alignment so that rotational power can be transferred from the engine to the motor through a multi-stage timing belt reduction system.
+
+The overall mechanical assembly is built around an aluminium profile frame. This frame provides the main structural base and allows the different mounts to be positioned, adjusted, and secured during assembly.
 
 <p align="center">
-  <img width="700" alt="3 Phase Full Bridge Rectifier Board Design" src="https://github.com/user-attachments/assets/d6b214be-9880-4b17-ab59-926c1be22da5" />
+  <img width="700" alt="Mechanical Assembly Isometric View" src="https://github.com/user-attachments/assets/b837fbdd-9aed-4159-94d9-0abc69a3781e" />
 </p>
 <p align="center">
-  <em>Figure 5: Mechanical Assembly Isometric View.</em>
+  <em>Figure 5: Full mechanical assembly isometric view.</em>
 </p>
+
+
+## Main Mechanical Structure
+
+The frame begins with aluminium profiles arranged to form the general shape of the generator structure. These profiles act as the main support rails for the engine, motor, and transmission system.
+
+The aluminium profiles are held together using brackets and horizontal spacers. The brackets provide rigid corner and side connections, while the horizontal spacers maintain the correct separation between the profiles and improve the stiffness of the frame.
+
+<p align="center">
+  <img width="500" alt="Horizontal Spacer" src="https://github.com/user-attachments/assets/14e6c144-5010-4ff9-afea-9c74717a7653" />
+</p>
+<p align="center">
+  <em>Figure 6: Horizontal spacer used to maintain frame spacing and rigidity.</em>
+
+<p align="center">
+  <img width="500" alt="Frame Bracket" src="https://github.com/user-attachments/assets/7cb6a5a2-7acb-423f-b89a-6f750a9c7b05" />
+</p>
+<p align="center">
+  <em>Figure 7: Bracket used to connect and reinforce the aluminium profile frame.</em>
+</p>
+
+## Main Components Connected to the Frame
+
+There are four main mechanical groups attached to the aluminium profile frame:
+
+| Component Group | Purpose |
+|---|---|
+| Aluminium profile frame | Main structural base of the system |
+| STS GT .21 engine mount | Holds the engine securely to the frame |
+| 57BYA94-48-01 BLDC motor mount | Holds the BLDC motor in position as the generator |
+| 3-stage transmission mount | Supports the pulley shafts and gear-reduction stages |
+
+## Engine Mount
+
+The STS GT .21 engine is mounted to the aluminium profile frame using a dedicated engine-to-aluminium-profile mount. This part allows the engine to be fixed to the frame while keeping the engine shaft aligned with the first pulley stage.
+
+<p align="center">
+  <img width="500" alt="Engine to Aluminium Profile Mount" src="INSERT_ENGINE_MOUNT_IMAGE_LINK_HERE" />
+</p>
+<p align="center">
+  <em>Figure 8: Engine-to-aluminium-profile mount for securing the STS GT .21 engine.</em>
+</p>
+
+The engine mount is important because the first pulley is directly connected to the engine output. If the engine is not mounted rigidly, the timing belt may slip, vibrate, or misalign during rotation.
+
+## BLDC Motor Mount
+
+The 57BYA94-48-01 BLDC motor is mounted using a dedicated motor mount. In this system, the BLDC motor acts as the generator. When the motor shaft is rotated by the transmission system, it produces a 3-phase AC electrical output.
+
+<p align="center">
+  <img width="500" alt="BLDC Motor Mount" src="INSERT_MOTOR_MOUNT_IMAGE_LINK_HERE" />
+</p>
+<p align="center">
+  <em>Figure 9: BLDC motor mount for securing the 57BYA94-48-01 motor.</em>
+</p>
+
+The motor mount keeps the generator shaft aligned with the final pulley stage. Proper alignment is important because the final belt connection transfers the reduced-speed, higher-torque rotation into the motor shaft.
+
+## Gear Reduction Stage Mount
+
+The 3-stage transmission system is supported by the gear reduction stage mount. This mount holds the intermediate shafts and pulleys used to transfer rotation from the engine to the BLDC motor.
+
+<p align="center">
+  <img width="500" alt="Gear Reduction Stage Mount" src="INSERT_GEAR_REDUCTION_STAGE_MOUNT_IMAGE_LINK_HERE" />
+</p>
+<p align="center">
+  <em>Figure 10: Gear reduction stage mount used to support the intermediate pulley shafts.</em>
+</p>
+
+The purpose of the transmission is to step down the high-speed rotation from the engine before it reaches the BLDC motor. This makes the mechanical system easier to control and helps match the engine output to the generator input.
+
+## Power Transmission Path
+
+The rotation from the STS GT .21 engine is transferred to the BLDC motor through a timing belt and pulley system.
+
+The transmission path is as follows:
+
+```text
+STS GT .21 Engine
+    ↓
+C-HTPA16S3M100-A-P5 pulley
+    ↓ Timing belt
+C-HTPA48S3M100-A-P10 pulley
+    ↓ Same shaft
+2 × C-HTPA25S3M100-A-P10 pulleys
+    ↓ Timing belt
+Set of C-HTPA25S3M100-A-P5 pulleys
+    ↓ Same shaft
+C-HTPA16S3M100-A-P5 pulley
+    ↓ Timing belt
+C-HTPA40S3M100-A-P8 pulley at BLDC motor
+    ↓
+57BYA94-48-01 BLDC Motor / Generator
