@@ -108,6 +108,15 @@ This section covers the overall flow of electrical components required to conver
 # Block Diagram
 <img width="1024" height="768" alt="EPS_BlockDiagram" src="https://github.com/user-attachments/assets/56d7f486-58b0-4813-a9c1-9b1005c0224a" />
 
+# ⚡⚡ 3 Phase Rectifier Design
+
+For this project, a custom 3 phase rectifier was designed to properly fit within the system and work for the intended purpose
+
+<img width="450" alt="3 Phase Full Bridge Rectifier Schematic" src="https://github.com/user-attachments/assets/6dfe00a0-76a7-4505-b78e-e59ce8100636" />
+<img width="650" alt="3 Phase Full Bridge Rectifier Board Design" src="https://github.com/user-attachments/assets/064305ba-7c76-4745-9f02-ff32d2999652" />
+<img width="500" alt="3 Phase Full Bridge Rectifier Physical Board Top" src="https://github.com/user-attachments/assets/1911912c-e8e8-4a4a-b174-81172fc4eddf" />
+<img width="500"alt="3 Phase Full Bridge Rectifier Physical Board Bottom" src="https://github.com/user-attachments/assets/7f5c6d4b-9166-4281-94f2-9c1f101f2f12" />
+
 
 #  🔧 Mechanical Breakdown
 
