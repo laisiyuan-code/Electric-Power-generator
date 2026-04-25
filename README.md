@@ -161,18 +161,21 @@ The frame begins with aluminium profiles arranged to form the general shape of t
 
 The aluminium profiles are held together using brackets and horizontal spacers. The brackets provide rigid corner and side connections, while the horizontal spacers maintain the correct separation between the profiles and improve the stiffness of the frame.
 
-<p align="center">
-  <img width="500" alt="Horizontal Spacer" src="https://github.com/user-attachments/assets/14e6c144-5010-4ff9-afea-9c74717a7653" />
-</p>
-<p align="center">
-  <em>Figure 6: Horizontal spacer used to maintain frame spacing and rigidity.</em>
+<table align="center">
+  <tr>
+    <td align="center">
+      <img width="500" alt="Horizontal Spacer" src="https://github.com/user-attachments/assets/14e6c144-5010-4ff9-afea-9c74717a7653" />
+      <br>
+      <em>Figure 6: Horizontal spacer used to maintain frame spacing and rigidity.</em>
+    </td>
+    <td align="center">
+      <img width="500" alt="Frame Bracket" src="https://github.com/user-attachments/assets/7cb6a5a2-7acb-423f-b89a-6f750a9c7b05" />
+      <br>
+      <em>Figure 7: Bracket used to connect and reinforce the aluminium profile frame.</em>
+    </td>
+  </tr>
+</table>
 
-<p align="center">
-  <img width="500" alt="Frame Bracket" src="https://github.com/user-attachments/assets/7cb6a5a2-7acb-423f-b89a-6f750a9c7b05" />
-</p>
-<p align="center">
-  <em>Figure 7: Bracket used to connect and reinforce the aluminium profile frame.</em>
-</p>
 
 ## Main Components Connected to the Frame
 
@@ -190,7 +193,7 @@ There are four main mechanical groups attached to the aluminium profile frame:
 The STS GT .21 engine is mounted to the aluminium profile frame using a dedicated engine-to-aluminium-profile mount. This part allows the engine to be fixed to the frame while keeping the engine shaft aligned with the first pulley stage.
 
 <p align="center">
-  <img width="500" alt="Engine to Aluminium Profile Mount" src="INSERT_ENGINE_MOUNT_IMAGE_LINK_HERE" />
+  <img width="500" alt="Engine to Aluminium Profile Mount" src="https://github.com/user-attachments/assets/690c53a3-0c97-45e8-89d7-760dad1b7239" />
 </p>
 <p align="center">
   <em>Figure 8: Engine-to-aluminium-profile mount for securing the STS GT .21 engine.</em>
@@ -203,7 +206,7 @@ The engine mount is important because the first pulley is directly connected to 
 The 57BYA94-48-01 BLDC motor is mounted using a dedicated motor mount. In this system, the BLDC motor acts as the generator. When the motor shaft is rotated by the transmission system, it produces a 3-phase AC electrical output.
 
 <p align="center">
-  <img width="500" alt="BLDC Motor Mount" src="INSERT_MOTOR_MOUNT_IMAGE_LINK_HERE" />
+  <img width="500" alt="BLDC Motor Mount" src="https://github.com/user-attachments/assets/d4f90d41-8c6e-4b59-b48c-202222efcd69" />
 </p>
 <p align="center">
   <em>Figure 9: BLDC motor mount for securing the 57BYA94-48-01 motor.</em>
@@ -216,7 +219,7 @@ The motor mount keeps the generator shaft aligned with the final pulley stage. P
 The 3-stage transmission system is supported by the gear reduction stage mount. This mount holds the intermediate shafts and pulleys used to transfer rotation from the engine to the BLDC motor.
 
 <p align="center">
-  <img width="500" alt="Gear Reduction Stage Mount" src="INSERT_GEAR_REDUCTION_STAGE_MOUNT_IMAGE_LINK_HERE" />
+  <img width="500" alt="Gear Reduction Stage Mount" src="https://github.com/user-attachments/assets/06edfa8f-9b72-4896-849a-a42d529f1913" />
 </p>
 <p align="center">
   <em>Figure 10: Gear reduction stage mount used to support the intermediate pulley shafts.</em>
