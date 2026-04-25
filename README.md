@@ -99,7 +99,7 @@ For further details on calculations and technical requirements, please check out
 4. **Safety-Considerations**
 5. **System Output** 
 
-# ⚡ Electrical Breakdown (BLDC Generator System)
+# 5. ⚡ Electrical Breakdown (BLDC Generator System)
 
 ## Overview
 
@@ -267,7 +267,7 @@ The buck converter should be rated above the expected rectified DC voltage. Base
    - The buck converter heatsink has airflow.
    - The output voltage is within the expected range.
 
-# 🔧 Mechanical Breakdown
+# 6. 🔧 Mechanical Breakdown
 
 The mechanical system is designed to hold the engine, transmission stage, and BLDC generator in a fixed alignment so that rotational power can be transferred from the engine to the motor through a multi-stage timing belt reduction system.
 
@@ -414,38 +414,14 @@ C-HTPA40S3M100-A-P8 pulley at BLDC motor
 5. **Install the Pulleys and Shafts**
 
    Install the pulleys according to the transmission path below:
+   1. The first `C-HTPA16S3M100-A-P5` pulley is mounted to the engine output.
+   2. This drives the `C-HTPA48S3M100-A-P10` pulley through the first timing belt.
+   3. On the same shaft as the `C-HTPA48S3M100-A-P10`, install the two `C-HTPA25S3M100-A-P10` pulleys.
+   4. These drive the set of `C-HTPA25S3M100-A-P5` pulleys through the second timing belt.
+   5. On the same shaft as the `C-HTPA25S3M100-A-P5` pulley set, install the second `C-HTPA16S3M100-A-P5` pulley.
+   6. This final `C-HTPA16S3M100-A-P5` pulley drives the `C-HTPA40S3M100-A-P8` pulley connected to the BLDC motor.
 
-   **Transmission path:**
-
-   STS GT .21 Engine  
-   ↓  
-   `C-HTPA16S3M100-A-P5`  
-   ↓ Timing belt  
-   `C-HTPA48S3M100-A-P10`  
-   ↓ Same shaft  
-   `2 × C-HTPA25S3M100-A-P10`  
-   ↓ Timing belt  
-   Set of `C-HTPA25S3M100-A-P5`  
-   ↓ Same shaft  
-   `C-HTPA16S3M100-A-P5`  
-   ↓ Timing belt  
-   `C-HTPA40S3M100-A-P8`  
-   ↓  
-   `57BYA94-48-01` BLDC Motor
-
-   The first `C-HTPA16S3M100-A-P5` pulley is mounted to the engine output.
-
-   This drives the `C-HTPA48S3M100-A-P10` pulley through the first timing belt.
-
-   On the same shaft as the `C-HTPA48S3M100-A-P10`, install the two `C-HTPA25S3M100-A-P10` pulleys.
-
-   These drive the set of `C-HTPA25S3M100-A-P5` pulleys through the second timing belt.
-
-   On the same shaft as the `C-HTPA25S3M100-A-P5` pulley set, install the second `C-HTPA16S3M100-A-P5` pulley.
-
-   This final `C-HTPA16S3M100-A-P5` pulley drives the `C-HTPA40S3M100-A-P8` pulley connected to the BLDC motor.
-
-6. **Install and Tension the Timing Belts**
+7. **Install and Tension the Timing Belts**
 
    Install the timing belts between each pulley pair.
 
@@ -453,7 +429,7 @@ C-HTPA40S3M100-A-P8 pulley at BLDC motor
 
    Rotate the pulley system by hand after each belt is installed. The belts should run straight and the pulleys should rotate smoothly.
 
-7. **Final Tightening and Alignment Check**
+8. **Final Tightening and Alignment Check**
 
    Once the engine, motor, transmission mount, pulleys, and belts are aligned, fully tighten all fasteners.
 
@@ -468,3 +444,48 @@ C-HTPA40S3M100-A-P8 pulley at BLDC motor
    - All belts run straight without drifting sideways.
    - All shafts rotate smoothly without binding.
    - There are no loose fasteners near rotating parts.
+
+# 7. Testing and Results
+
+## Suggested Test Matrix
+
+| Test | Measurement | Expected Outcome |
+|---|---|---|
+| Open-circuit generator test | AC voltage vs RPM | Voltage increases with RPM |
+| Rectifier test | DC voltage after rectifier | DC bus follows rectified AC voltage |
+| Capacitor smoothing test | DC ripple with and without capacitor | Ripple decreases with capacitor |
+| Buck converter test | Regulated output voltage | Stable output, e.g. 12 V |
+| Load test | Output voltage and current under load | Voltage remains stable within load rating |
+| Thermal test | Rectifier and buck converter temperature | Temperature remains within safe limits |
+| Protection test | Fuse behaviour under controlled fault | Fuse protects circuit without nuisance tripping |
+
+## Results
+
+The motor is able to generate power when the engine shaft spins fast enough. However, as of now the engine is still undergoing maintenance and cannot be used to test the system.
+
+# 8. Discussion
+
+The design is technically feasible as a portable power-generation concept because a BLDC motor can generate 3-phase AC when rotated, and the electrical chain of rectification, smoothing, protection, and buck conversion is a standard way to obtain usable DC power.
+
+However, the most important challenge is not whether voltage can be generated. The main challenge is controlling unstable energy input. The generator output depends strongly on RPM and load. Sudden changes in load can cause voltage spikes, while high RPM can push the DC bus near or above the safe rating of downstream components. This is why the rectifier, capacitor, fuse, buck converter, wiring, and thermal design must all be chosen with margin.
+
+For a camping use case, the system should prioritise reliability and user safety. A low-voltage electrically driven bench prototype is the best first validation step. Only after confirming output behaviour, regulation stability, and thermal performance should higher-energy mechanical input methods be considered.
+
+# 9. Limitations
+
+The current analysis has several limitations:
+
+- The calculations use simplified approximations rather than measured generator data.
+- Real BLDC generator output depends on motor construction, winding resistance, load, RPM, and coupling losses.
+- The DC bus voltage may spike above the calculated values during sudden load removal.
+- Thermal performance cannot be confirmed without physical testing.
+- Battery charging requires a dedicated charge controller and should not be done directly from an unregulated generator output.
+- A fuel-powered RC engine version introduces significant safety risks and should not be treated as a beginner build.
+
+# 10. Conclusion
+
+This project evaluates a portable electric power generator system for camping and off-grid use. The concept uses a BLDC motor as a generator, converts its 3-phase AC output into DC using a rectifier, smooths the DC bus with capacitors, protects the circuit with a fuse and optional transient components, and regulates the voltage using a high-voltage switching buck converter.
+
+Based on the repository assumptions, the generator stage may produce approximately 55–65 V DC and around 90–140 W across the estimated operating range. This is enough to power small outdoor electrical loads if the output is properly regulated. The recommended electrical design includes a rectifier rated at least 200 V and 10–15 A, a DC-rated 5 A slow-blow fuse, capacitors rated at least 100 V, and a high-voltage buck converter rated around 80–100 V input or higher.
+
+The safest development path is to validate the system using a low-voltage bench prototype before considering higher-energy mechanical drive systems. The system should be treated as a controlled engineering prototype, with careful attention to overvoltage, heat, wiring protection, and mechanical guarding.
