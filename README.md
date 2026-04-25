@@ -112,11 +112,42 @@ This section covers the overall flow of electrical components required to conver
 
 For this project, a custom 3 phase rectifier was designed to properly fit within the system and work for the intended purpose
 
-<img width="450" alt="3 Phase Full Bridge Rectifier Schematic" src="https://github.com/user-attachments/assets/6dfe00a0-76a7-4505-b78e-e59ce8100636" />
-<img width="650" alt="3 Phase Full Bridge Rectifier Board Design" src="https://github.com/user-attachments/assets/064305ba-7c76-4745-9f02-ff32d2999652" />
-<img width="500" alt="3 Phase Full Bridge Rectifier Physical Board Top" src="https://github.com/user-attachments/assets/1911912c-e8e8-4a4a-b174-81172fc4eddf" />
-<img width="500"alt="3 Phase Full Bridge Rectifier Physical Board Bottom" src="https://github.com/user-attachments/assets/7f5c6d4b-9166-4281-94f2-9c1f101f2f12" />
+<p align="center">
+  <img width="700" alt="3 Phase Full Bridge Rectifier Schematic" src="https://github.com/user-attachments/assets/71cf7123-3b1b-493a-95d2-15b34866a1b6" />
+</p>
+<p align="center">
+  <em>Figure 1: 3 Phase Full Bridge Rectifier schematic.</em>
+</p>
 
+<p align="center">
+  <img width="700" alt="3 Phase Full Bridge Rectifier Board Design" src="https://github.com/user-attachments/assets/06712d1f-bed3-4e11-850c-51d1665d077f" />
+</p>
+<p align="center">
+  <em>Figure 2: 3 Phase Full Bridge Rectifier PCB board design.</em>
+</p>
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img width="400" alt="3 Phase Full Bridge Rectifier Physical Board Top" src="https://github.com/user-attachments/assets/83b25985-a1a5-4eb3-97b0-1862d66ec1e9" />
+      <br>
+      <em>Figure 3: Physical PCB top view.</em>
+    </td>
+    <td align="center">
+      <img width="400" alt="3 Phase Full Bridge Rectifier Physical Board Bottom" src="https://github.com/user-attachments/assets/77101d33-5dfb-4f64-b41b-856268805363" />
+      <br>
+      <em>Figure 4: Physical PCB bottom view.</em>
+    </td>
+  </tr>
+</table>
 
 #  🔧 Mechanical Breakdown
 
+First, we can see the full assembly in the following figure, Figure 5.
+
+<p align="center">
+  <img width="700" alt="3 Phase Full Bridge Rectifier Board Design" src="https://github.com/user-attachments/assets/d6b214be-9880-4b17-ab59-926c1be22da5" />
+</p>
+<p align="center">
+  <em>Figure 5: Mechanical Assembly Isometric View.</em>
+</p>
