@@ -99,18 +99,32 @@ For further details on calculations and technical requirements, please check out
 4. **Safety-Considerations**
 5. **System Output** 
 
-# ⚡ Electrical Block Diagram (BLDC Generator System)
+# ⚡ Electrical Breakdown (BLDC Generator System)
 
 ## Overview
 
 This section covers the overall flow of electrical components required to convert 3-phase AC from the BLDC motor into usable DC power.
 
-# Block Diagram
+## Block Diagram
 <img width="1024" height="768" alt="EPS_BlockDiagram" src="https://github.com/user-attachments/assets/56d7f486-58b0-4813-a9c1-9b1005c0224a" />
 
-# ⚡⚡ 3 Phase Rectifier Design
+## Main Electrical Components
 
-For this project, a custom 3 phase rectifier was designed to properly fit within the system and work for the intended purpose
+| Component | Purpose |
+|---|---|
+| `57BYA94-48-01` BLDC motor | Generates 3-phase AC when mechanically rotated |
+| 3-phase full bridge rectifier PCB | Converts the 3-phase AC input into DC |
+| Rectifier diodes | Allow current to flow in one direction and form the rectifier bridge |
+| Bulk capacitor, `100 V 4700 µF` | Smooths the rectified DC output and reduces voltage ripple |
+| Fuse / terminal connection | Provides a safer and cleaner connection point for wiring |
+| Buck converter | Steps the rectified DC voltage down to a usable DC output |
+| Input and output wiring | Transfers power between the generator, rectifier, and buck converter |
+
+# 3 Phase Rectifier Design
+
+The first electrical stage is the 3-phase full bridge rectifier.
+
+The BLDC motor produces 3-phase AC output through three phase wires. These three wires are connected to the rectifier input. The rectifier uses six diodes arranged as a 3-phase bridge. This converts the alternating 3-phase input into a single DC output.
 
 <p align="center">
   <img width="700" alt="3 Phase Full Bridge Rectifier Schematic" src="https://github.com/user-attachments/assets/71cf7123-3b1b-493a-95d2-15b34866a1b6" />
@@ -141,6 +155,118 @@ For this project, a custom 3 phase rectifier was designed to properly fit within
   </tr>
 </table>
 
+The rectifier PCB includes:
+
+| Part | Function |
+|---|---|
+| 3-phase AC input connections | Receives the three output phases from the BLDC motor |
+| Six rectifier diodes | Converts the 3-phase AC waveform into DC |
+| Large copper traces | Handles higher current paths on the rectifier board |
+| `100 V 4700 µF` capacitor | Smooths the rectified DC voltage |
+| DC output terminals | Sends the rectified DC voltage to the buck converter |
+
+The large capacitor is placed after the rectifier stage. Its job is to store energy and reduce the ripple from the rectified waveform. Without this capacitor, the DC output would fluctuate more heavily as the generator speed changes.
+
+## Rectifier Board Images
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img width="500" alt="3 Phase Rectifier Board Top" src="https://github.com/user-attachments/assets/1d896c29-4370-448e-86eb-e2018fcff54b" />
+      <br>
+      <em>Figure 5: 3-phase rectifier board with diodes, fuse connection, and smoothing capacitor.</em>
+    </td>
+    <td align="center">
+      <img width="500" alt="3 Phase Rectifier Board Bottom" src="https://github.com/user-attachments/assets/fc62bc19-4432-441f-94b5-4047375ae78a" />
+      <br>
+      <em>Figure 6: Bottom side of the rectifier PCB showing the high-current copper paths.</em>
+    </td>
+  </tr>
+</table>
+
+## Buck Converter Stage
+
+After rectification, the output is still not directly suitable for most loads because the DC voltage depends on the generator speed. When the engine speed changes, the BLDC motor output voltage also changes.
+
+The buck converter is used to step the rectified DC bus voltage down to a more stable and usable DC output.
+
+The buck converter stage includes:
+
+| Connection | Description |
+|---|---|
+| Input + | Connected to the positive DC output from the rectifier board |
+| Input - | Connected to the negative DC output from the rectifier board |
+| Output + | Regulated positive DC output |
+| Output - | Regulated negative DC output / ground reference |
+
+The buck converter should be rated above the expected rectified DC voltage. Based on the electrical requirements, the converter should support a wide input range and have enough current capacity for the intended load.
+
+## Buck Converter Image
+
+<p align="center">
+  <img width="500" alt="Buck Converter" src="https://github.com/user-attachments/assets/34868db7-ed06-475e-83c9-0d29adeafa28" />
+</p>
+<p align="center">
+  <em>Figure 7: Buck converter used to step the rectified DC voltage down to a usable output voltage.</em>
+</p>
+
+## Electrical Assembly Method
+
+1. **Connect the BLDC Motor to the Rectifier Input**
+
+   Identify the three phase wires from the `57BYA94-48-01` BLDC motor.
+
+   Connect these three wires to the 3-phase AC input side of the rectifier board. Since this is a 3-phase AC input, the order of the three phase wires is not critical for rectification.
+
+2. **Check the Rectifier Board Polarity**
+
+   Confirm the positive and negative DC output sides of the rectifier board.
+
+   The rectifier output must be connected correctly because the capacitor and buck converter are polarity-sensitive.
+
+3. **Install the Bulk Capacitor**
+
+   Connect the `100 V 4700 µF` capacitor across the rectifier DC output.
+
+   The positive capacitor leg must connect to the positive DC bus. The negative capacitor leg must connect to the negative DC bus.
+
+   This capacitor smooths the rectified DC output before it enters the buck converter.
+
+4. **Connect the Rectifier Output to the Buck Converter Input**
+
+   Connect the positive DC output from the rectifier to the buck converter `Input +`.
+
+   Connect the negative DC output from the rectifier to the buck converter `Input -`.
+
+   Use sufficiently thick wires for the power path because this section carries the main output current from the generator.
+
+5. **Connect the Buck Converter Output**
+
+   Connect the buck converter output to the intended load or output terminal.
+
+   The buck converter output should only be connected after the input polarity has been checked.
+
+6. **Perform a Low-Speed Test First**
+
+   Rotate the generator slowly and measure the rectifier DC output using a multimeter.
+
+   Check that the DC voltage rises smoothly as the motor speed increases.
+
+   After confirming the rectifier output, measure the buck converter output to verify that it is regulating correctly.
+
+7. **Final Electrical Checks**
+
+   Before running the system at higher speed, check that:
+
+   - The capacitor polarity is correct.
+   - The rectifier output polarity is correct.
+   - The buck converter input polarity is correct.
+   - All power wires are firmly connected.
+   - No exposed wires can short together.
+   - The rectifier diodes are not overheating.
+   - The buck converter heatsink has airflow.
+   - The output voltage is within the expected range.
+
 # 🔧 Mechanical Breakdown
 
 The mechanical system is designed to hold the engine, transmission stage, and BLDC generator in a fixed alignment so that rotational power can be transferred from the engine to the motor through a multi-stage timing belt reduction system.
@@ -151,7 +277,7 @@ The overall mechanical assembly is built around an aluminium profile frame. This
   <img width="700" alt="Mechanical Assembly Isometric View" src="https://github.com/user-attachments/assets/b837fbdd-9aed-4159-94d9-0abc69a3781e" />
 </p>
 <p align="center">
-  <em>Figure 5: Full mechanical assembly isometric view.</em>
+  <em>Figure 8: Full mechanical assembly isometric view.</em>
 </p>
 
 
@@ -166,12 +292,12 @@ The aluminium profiles are held together using brackets and horizontal spacers. 
     <td align="center">
       <img width="500" alt="Horizontal Spacer" src="https://github.com/user-attachments/assets/14e6c144-5010-4ff9-afea-9c74717a7653" />
       <br>
-      <em>Figure 6: Horizontal spacer used to maintain frame spacing and rigidity.</em>
+      <em>Figure 9: Horizontal spacer used to maintain frame spacing and rigidity.</em>
     </td>
     <td align="center">
       <img width="500" alt="Frame Bracket" src="https://github.com/user-attachments/assets/7cb6a5a2-7acb-423f-b89a-6f750a9c7b05" />
       <br>
-      <em>Figure 7: Bracket used to connect and reinforce the aluminium profile frame.</em>
+      <em>Figure 10: Bracket used to connect and reinforce the aluminium profile frame.</em>
     </td>
   </tr>
 </table>
@@ -196,7 +322,7 @@ The STS GT .21 engine is mounted to the aluminium profile frame using a dedicate
   <img width="500" alt="Engine to Aluminium Profile Mount" src="https://github.com/user-attachments/assets/690c53a3-0c97-45e8-89d7-760dad1b7239" />
 </p>
 <p align="center">
-  <em>Figure 8: Engine-to-aluminium-profile mount for securing the STS GT .21 engine.</em>
+  <em>Figure 11: Engine-to-aluminium-profile mount for securing the STS GT .21 engine.</em>
 </p>
 
 The engine mount is important because the first pulley is directly connected to the engine output. If the engine is not mounted rigidly, the timing belt may slip, vibrate, or misalign during rotation.
@@ -209,7 +335,7 @@ The 57BYA94-48-01 BLDC motor is mounted using a dedicated motor mount. In this s
   <img width="500" alt="BLDC Motor Mount" src="https://github.com/user-attachments/assets/d4f90d41-8c6e-4b59-b48c-202222efcd69" />
 </p>
 <p align="center">
-  <em>Figure 9: BLDC motor mount for securing the 57BYA94-48-01 motor.</em>
+  <em>Figure 12: BLDC motor mount for securing the 57BYA94-48-01 motor.</em>
 </p>
 
 The motor mount keeps the generator shaft aligned with the final pulley stage. Proper alignment is important because the final belt connection transfers the reduced-speed, higher-torque rotation into the motor shaft.
@@ -222,7 +348,7 @@ The 3-stage transmission system is supported by the gear reduction stage mount. 
   <img width="500" alt="Gear Reduction Stage Mount" src="https://github.com/user-attachments/assets/06edfa8f-9b72-4896-849a-a42d529f1913" />
 </p>
 <p align="center">
-  <em>Figure 10: Gear reduction stage mount used to support the intermediate pulley shafts.</em>
+  <em>Figure 13: Gear reduction stage mount used to support the intermediate pulley shafts.</em>
 </p>
 
 The purpose of the transmission is to step down the high-speed rotation from the engine before it reaches the BLDC motor. This makes the mechanical system easier to control and helps match the engine output to the generator input.
