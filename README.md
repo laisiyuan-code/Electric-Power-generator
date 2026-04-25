@@ -92,36 +92,22 @@ Lead Acid Battery / Portable Camping Load
 
 # 4. Equations / Calculations / Technical Analysis
 
-For further details on calculations, please check out :
+For further details on calculations and technical requirements, please check out :
 1. **3-Phase Rectifier Design Calculator**
 2. **Buck-Converter-Calculation**
-3. **Safety-Considerations**
-4. **System Output** 
+3. **Electrical-Requirements**
+4. **Safety-Considerations**
+5. **System Output** 
 
 # ⚡ Electrical Block Diagram (BLDC Generator System)
 
 ## Overview
 
-This section covers the overall flow of electrical components as well as the BOM of **essential electrical components** required to convert 3-phase AC from the BLDC motor into usable DC power.
+This section covers the overall flow of electrical components required to convert 3-phase AC from the BLDC motor into usable DC power.
 
 # Block Diagram
 <img width="1024" height="768" alt="EPS_BlockDiagram" src="https://github.com/user-attachments/assets/56d7f486-58b0-4813-a9c1-9b1005c0224a" />
 
----
-
-# 📦 Bill of Materials
-
-| Item | Component                     | Specification                           | Qty       | Notes                           |
-| ---- | ----------------------------- | --------------------------------------- | --------- | ------------------------------- |
-| 1    | 3-Phase Rectifier Module      | 200–600V, 20–30A, 5-pin (U, V, W, +, −) | 1         | Example: SBR2502G or equivalent |
-| 2    | Bulk Capacitor (Electrolytic) | 3300–4700 µF, ≥100V                     | 1–2       | Main DC smoothing               |
-| 3    | Fuse                          | 5A–10A, DC rated                        | 1         | Protects downstream electronics |
-| 4    | Buck Converter (DC-DC)        | Input ≥60–80V, Output 12V (or desired)  | 1         | For usable output               |
-| 5    | TVS Diode (optional)          | ~70–75V clamp                           | 1         | Protects against voltage spikes |
-| 6    | NTC Thermistor (optional)     | Inrush current limiter                  | 1         | Reduces startup surge           |
-| 7    | Wiring (Power)                | 16–18 AWG silicone wire                 | As needed | For AC + DC paths               |
-| 8    | Terminal Blocks / Connectors  | ≥100V, ≥10A rated                       | As needed | For clean connections           |
-| 9    | Heatsink / Mount Plate        | Aluminum plate or heatsink              | 1         | For rectifier cooling           |
 
 #  🔧 Mechanical Breakdown
 
