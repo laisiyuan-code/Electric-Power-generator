@@ -98,11 +98,14 @@ For further details on calculations, please check out :
 3. **Safety-Considerations**
 4. **System Output** 
 
-# ⚡ Electrical BOM (BLDC Generator System)
+# ⚡ Electrical Block Diagram (BLDC Generator System)
 
 ## Overview
 
-This BOM covers the **essential electrical components** required to convert 3-phase AC from the BLDC motor into usable DC power.
+This section covers the overall flow of electrical components as well as the BOM of **essential electrical components** required to convert 3-phase AC from the BLDC motor into usable DC power.
+
+# Block Diagram
+<img width="1024" height="768" alt="EPS_BlockDiagram" src="https://github.com/user-attachments/assets/56d7f486-58b0-4813-a9c1-9b1005c0224a" />
 
 ---
 
